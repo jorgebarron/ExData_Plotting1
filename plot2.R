@@ -21,12 +21,11 @@ filteredData <- (subset(dataAll, Date == "2007-02-01" | Date == "2007-02-02"))
 # change current directory. The png will be saved here, as well as the r file.
 setwd("C:/Users/Jorge - work/github-repos/ExploratoryData/ExData_Plotting1")
 
-png(filename = "plot1.png",
-    width = 480, height = 480)
+#png(filename = "plot1.png",
+#    width = 480, height = 480)
 
-hist(filteredData$Global_active_power,
+plot(filteredData$time,filteredData$Global_active_power,
 	main="Global Active Power",  
-	xlab="Global Active Power (kilowatts)",
-	col="red")
+	xlab="Global Active Power (kilowatts)")
 
-dev.off()
+#dev.off()
